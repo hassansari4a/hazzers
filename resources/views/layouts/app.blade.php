@@ -19,6 +19,7 @@
     
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/layoutStyle.css">
+    <link rel="stylesheet" href="/css/shop.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 </head>
 <body ">
@@ -32,7 +33,7 @@
             <div class="col-3">
                 @include('inc.sidebar')
             </div>
-            <div class="col-9  bg-faded my-col py-1 mx" >
+            <div class="col-9 my-col bg-faded px-1 py-1" >
                 <div class="shop">
                     @yield('content')
                 </div>

@@ -1,5 +1,5 @@
 <div class="left-sidebar" >
-    <h2 class="category-heading">Category</h2>    
+    <h2 class="category-heading py-1">Category</h2>    
     <div id="accordian" class="panel-group category-products">
         <div class= "panel panel-default"> 
             <div class="panel-heading"> 
