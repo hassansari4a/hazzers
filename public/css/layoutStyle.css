@@ -1,8 +1,20 @@
-.body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main {
+    flex: 1 0 auto;
+}
+
+
+#hazzerfooter{
+    background-color: rgb(56, 53, 53);
+    color: rgba(255, 255, 255, 0.589);
     font-size: 14px;
-    line-height: 1.428571429;
-    color: #333;
+    padding: 40px;
+    padding-bottom: 25px;
 }
 
 #searchbar{

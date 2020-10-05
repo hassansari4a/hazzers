@@ -55,9 +55,9 @@
   text-align: start;
   position: relative;
 
-  white-space: nowrap;
+  /* white-space: nowrap;
   overflow: hidden;
-  text-overflow:  ellipsis;
+  text-overflow:  ellipsis; */
   z-index: 3;
 }
 .pricecontainer{

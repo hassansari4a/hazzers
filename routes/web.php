@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/register', function () {
     return view('register');
@@ -26,6 +26,7 @@ Route::get('/cart', function () {
 Auth::routes();
 
 Route::get('/shop', 'ShopController@index')->name('shop');
+Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/users/logout', 'Auth\LoginController@userLogout')->name('user.logout');

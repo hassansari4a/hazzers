@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom shadow-sm sticky-top" style="margin-bottom: 10px">
   	<div class="container-fluid padding ">
-	  <a href="/" class="navbar-brand"><img src="img/LogoReal.png" width="126" height="50" alt="Hazzers"></a>
+	  <a href="/" class="navbar-brand"><img src="{{asset('/img/LogoReal.png')}}" width="126" height="50" alt="Hazzers"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 			<span class="navbar-toggler-icon"></span>
 		</button>

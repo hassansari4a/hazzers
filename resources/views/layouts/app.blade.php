@@ -15,8 +15,8 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-    </style>
-    
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400,700" rel="stylesheet"> -->
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/layoutStyle.css">
     <link rel="stylesheet" href="/css/shop.css">
@@ -24,8 +24,10 @@
 </head>
 <body ">
     
-    @include('inc.navbar')
-
+    <header>
+        @include('inc.navbar')
+    </header>
+    <main>
     <div class='container my-container '>
     
         <div class="row my-row align-self-start">
@@ -40,13 +42,15 @@
             </div>
         </div>
     </div>
+    </main>
     
-
+    @include('inc.footer')
+    
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
+    
 </body>
 </html>
