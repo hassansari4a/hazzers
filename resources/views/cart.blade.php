@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.layout2')
 
 @section('content')
 <h1>Cart</h1>

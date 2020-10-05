@@ -25,6 +25,8 @@ Route::get('/cart', function () {
 
 Auth::routes();
 
+Route::get('/shop', 'ShopController@index')->name('shop');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/users/logout', 'Auth\LoginController@userLogout')->name('user.logout');
 
@@ -35,3 +37,5 @@ Route::prefix('admin')->group(function(){
     Route::get('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
 });
 
+Route::get('/new-product', 'NewProductController@index')->name('newproduct');
+Route::post('/new-product', 'NewProductController@store')->name('newproduct.submit');

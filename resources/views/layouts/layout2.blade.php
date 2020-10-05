@@ -15,27 +15,17 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-    </style>
     
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/layoutStyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 </head>
-<body ">
-    
+<body>
     @include('inc.navbar')
-
-    <div class='container my-container '>
     
-        <div class="row my-row align-self-start">
-            
-            <div class="col-3">
-                @include('inc.sidebar')
-            </div>
-            <div class="col-9  bg-faded my-col py-1 mx" >
-                <div class="shop">
-                    @yield('content')
-                </div>
+    <div class='container my-container'>
+            <div class="col my-col">
+                @yield('content')
             </div>
         </div>
     </div>
