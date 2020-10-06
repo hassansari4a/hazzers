@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-})->name('welcome');
+})->name('/');
 
 Route::get('/register', function () {
     return view('register');

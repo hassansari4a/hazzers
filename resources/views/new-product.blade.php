@@ -25,6 +25,8 @@
             <label for="categotyselect">Category select</label>
             <select class="form-control" required name="categoryselect" id="categotyselect">
             <option value="1">Electronics</option>
+            <option value="1">Mobile Phones</option>
+            <option value="1">Computers</option>
             <option value="2">Fashion</option>
             <option value="3">Home and Garden</option>
             <option value="4">Auto Parts and Accessories</option>

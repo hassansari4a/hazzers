@@ -28,14 +28,17 @@
         @include('inc.navbar')
     </header>
     <main>
+    <div class="container-fluid ">
+        <div class="breadcrumb-container bg-faded">
+            @yield('breadcrumb')
+        </div>
+    </div>
     <div class='container my-container '>
-    
         <div class="row my-row align-self-start">
-            
             <div class="col-3">
                 @include('inc.sidebar')
             </div>
-            <div class="col-9 my-col bg-faded px-1 py-1" >
+            <div class="col-9 my-col bg-faded right-cont px-1 py-1" >
                 <div class="shop">
                     @yield('content')
                 </div>

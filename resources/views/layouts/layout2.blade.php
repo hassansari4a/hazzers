@@ -25,8 +25,12 @@
     <header>
         @include('inc.navbar')
     </header>
-    
     <main>
+    <div class="container-fluid ">
+        <div class="breadcrumb-container bg-faded">
+            @yield('breadcrumb')
+        </div>
+    </div>
         <div class='container my-container'>
             <div class="col my-col">
                 @yield('content')

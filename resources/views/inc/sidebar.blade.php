@@ -8,6 +8,16 @@
         </div>
         <div class= "panel panel-default"> 
             <div class="panel-heading"> 
+                <h4 class="panel-title"><a href="{{ route('shop') }}">Mobile Phones</a></h4>
+            </div>
+        </div>
+        <div class= "panel panel-default"> 
+            <div class="panel-heading"> 
+                <h4 class="panel-title"><a href="{{ route('shop') }}">Computers</a></h4>
+            </div>
+        </div>
+        <div class= "panel panel-default"> 
+            <div class="panel-heading"> 
                 <h4 class="panel-title"><a href="{{ route('shop') }}">Fashion</a></h4>
             </div>
         </div>

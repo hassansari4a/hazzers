@@ -1,8 +1,16 @@
 @extends('layouts.app')
 
+@section('breadcrumb')
+<div class="breadcrumbs">
+        <a class="blink" href="{{ route('/')}}">Home</a>
+        <i class="fa fa-chevron-right breadcrumb-separator"></i>
+        <span>Shop</span>
+        <!-- <li class="breadcrumb-item"><a id="bcrumb-link" href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Shop</li> -->
+</div>
+@endsection
+
 @section('content')
-
-
 <div class="container listings">
     <h2 class="listing-heading">Listings</h2>
     @foreach ($products as $product)      

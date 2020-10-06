@@ -7,7 +7,24 @@ body {
 main {
     flex: 1 0 auto;
 }
+.breadcrumb-container{
+    border-radius: .25rem;
 
+}
+
+.breadcrumbs{
+    padding: 10px;
+    font-family: roboto;
+    margin-bottom: 10px;
+}
+.blink{
+    padding-right: 5px;
+    color:#696763;
+}
+.blink:focus, .blink:hover{
+    color:#333333;
+    text-decoration: none;
+}
 
 #hazzerfooter{
     background-color: rgb(56, 53, 53);
