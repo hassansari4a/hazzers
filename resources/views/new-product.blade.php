@@ -1,5 +1,11 @@
 @extends('layouts.layout2')
-
+@section('breadcrumb')
+<div class="breadcrumbs">
+  <a class="blink" href="{{ route('/')}}">Home</a>
+  <i class="fa fa-chevron-right breadcrumb-separator"></i>
+  <span>New Product</span>
+</div>
+@endsection
 @section('content')
 <div class="container bg-faded pb-3">
     <form method="POST" action="{{ route('newproduct.submit') }}" enctype='multipart/form-data'>
@@ -24,16 +30,16 @@
             <div class="form-group col">
             <label for="categotyselect">Category select</label>
             <select class="form-control" required name="categoryselect" id="categotyselect">
-            <option value="1">Electronics</option>
-            <option value="1">Mobile Phones</option>
-            <option value="1">Computers</option>
-            <option value="2">Fashion</option>
-            <option value="3">Home and Garden</option>
-            <option value="4">Auto Parts and Accessories</option>
-            <option value="5">Musical Instruments</option>
-            <option value="6">Sports</option>
-            <option value="7">Toys and Hobbies</option>
-            <option value="8" >Video Games and Console</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Mobile Phones">Mobile Phones</option>
+            <option value="Computers">Computers</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Home and Garden">Home and Garden</option>
+            <option value="Auto Parts and Accessories">Auto Parts and Accessories</option>
+            <option value="Musical Instruments">Musical Instruments</option>
+            <option value="Sports">Sports</option>
+            <option value="Toys and Hobbies">Toys and Hobbies</option>
+            <option value="Video Games and Console" >Video Games and Console</option>
             </select>
             </div>
         </div>

@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Product;
 
-class ShopController extends Controller
+class CartController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class ShopController extends Controller
      */
     public function index()
     {
-        $products = Product::inRandomOrder()->take(12)->get();
-        return view('shop')->with('products',$products);
+        return view('cart');
     }
 
     /**
@@ -42,13 +40,12 @@ class ShopController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  string slug
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($id)
     {
-        $product = Product::where('slug',$slug)->firstOrFail();
-        return view('product')->with('product',$product);
+        //
     }
 
     /**

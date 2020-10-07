@@ -18,15 +18,22 @@ Route::get('/', function () {
 Route::get('/register', function () {
     return view('register');
 });
+// Route::get('/cart', function () {
+//     return view('cart');
+// });
 
-Route::get('/cart', function () {
-    return view('cart');
+Route::get('/category', function () {
+    return view('category');
 });
 
 Auth::routes();
 
 Route::get('/shop', 'ShopController@index')->name('shop');
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
+
+Route::get('/shop/category/{category}', 'CategoryController@show')->name('shop.category');
+
+Route::get('/cart', 'CartController@index')->name('cart.index');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/users/logout', 'Auth\LoginController@userLogout')->name('user.logout');

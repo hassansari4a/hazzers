@@ -1,5 +1,9 @@
 @extends('layouts.layout2')
-
+@section('breadcrumb')
+<div class="breadcrumbs">
+        <span>Home</span>
+</div>
+@endsection
 @section('content')
 <div class="container">
     <div class="row">

@@ -1,0 +1,52 @@
+.hero{
+  font-family: Roboto;
+}
+
+.hero-heading{
+  padding-top: 80px;
+  padding-bottom: 30px;
+  text-align: right;
+  animation: fade 2.5s cubic-bezier(.37,-0.69,.4,.41);
+}
+
+.hero-words{
+
+  font-size: 26px;
+  font-weight: 300;
+  text-align: right;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+  animation: drive 2s cubic-bezier(.37,-0.69,.15,1.2) ;
+}
+.hero-buttons{
+  text-align: right;
+  
+}
+
+.shop-button{
+  text-align: center;
+  border-radius: 4px;
+  background-color:white;
+  border: 1px solid #333;
+  color: #333;
+  font-size: 20px;
+  width: 80px;
+  height: 40px;
+  /* cursor: pointer; */
+  animation: fade 2.5s cubic-bezier(.37,-0.69,.4,.41);
+}
+
+.shop-button:hover{
+  background-color:#333;
+  color: white;
+}
+
+@keyframes drive{
+  from{ transform: translateX(400px); color:transparent }
+  to{ transform: translateX(0px)}
+}
+
+@keyframes fade{
+  from{ opacity: 0.0; }
+  to{ opacity: 1;}
+}

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 
-class ShopController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class ShopController extends Controller
      */
     public function index()
     {
-        $products = Product::inRandomOrder()->take(12)->get();
-        return view('shop')->with('products',$products);
+        //
     }
 
     /**
@@ -42,13 +41,13 @@ class ShopController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  string slug
+     * @param  string  $categoryselect
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($categoryselect)
     {
-        $product = Product::where('slug',$slug)->firstOrFail();
-        return view('product')->with('product',$product);
+        $products = Product::where('categoryselect',$categoryselect)->get();
+        return view('category')->with('products',$products)->with('categoryselect',$categoryselect);
     }
 
     /**

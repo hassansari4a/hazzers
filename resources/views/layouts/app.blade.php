@@ -38,7 +38,7 @@
             <div class="col-3">
                 @include('inc.sidebar')
             </div>
-            <div class="col-9 my-col bg-faded right-cont px-1 py-1" >
+            <div class="col-9 my-col right-cont px-1 py-1" >
                 <div class="shop">
                     @yield('content')
                 </div>

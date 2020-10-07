@@ -25,6 +25,9 @@ main {
     color:#333333;
     text-decoration: none;
 }
+.right-cont{
+    background-color: f;
+}
 
 #hazzerfooter{
     background-color: rgb(56, 53, 53);
@@ -102,7 +105,7 @@ main {
 
 .panel-heading {
     padding: 10px 15px;
-    border-bottom: 1px solid transparent;
+    
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
 }

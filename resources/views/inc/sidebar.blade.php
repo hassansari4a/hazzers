@@ -3,52 +3,52 @@
     <div id="accordian" class="panel-group category-products">
         <div class= "panel panel-default"> 
             <div class="panel-heading"> 
-                <h4 class="panel-title"><a href="{{ route('shop') }}">Electronics</a></h4>
+                <h4 class="panel-title"><a href="{{ route('shop.category','Electronics') }}">Electronics</a></h4>
             </div>
         </div>
         <div class= "panel panel-default"> 
             <div class="panel-heading"> 
-                <h4 class="panel-title"><a href="{{ route('shop') }}">Mobile Phones</a></h4>
+                <h4 class="panel-title"><a href="{{ route('shop.category','Mobile Phones') }}">Mobile Phones</a></h4>
             </div>
         </div>
         <div class= "panel panel-default"> 
             <div class="panel-heading"> 
-                <h4 class="panel-title"><a href="{{ route('shop') }}">Computers</a></h4>
+                <h4 class="panel-title"><a href="{{ route('shop.category','Computers') }}">Computers</a></h4>
             </div>
         </div>
         <div class= "panel panel-default"> 
             <div class="panel-heading"> 
-                <h4 class="panel-title"><a href="{{ route('shop') }}">Fashion</a></h4>
+                <h4 class="panel-title"><a href="{{ route('shop.category','Fashion') }}">Fashion</a></h4>
             </div>
         </div>
         <div class= "panel panel-default"> 
             <div class="panel-heading"> 
-                <h4 class="panel-title"><a href="{{ route('shop') }}">Home and garden</a></h4>
+                <h4 class="panel-title"><a href="{{ route('shop.category','Home and garden') }}">Home and garden</a></h4>
             </div>
         </div>
         <div class= "panel panel-default"> 
             <div class="panel-heading"> 
-                <h4 class="panel-title"><a href="{{ route('shop') }}">Auto parts and Accessories</a></h4>
+                <h4 class="panel-title"><a href="{{ route('shop.category','Auto parts and Accessories') }}">Auto parts and Accessories</a></h4>
             </div>
         </div>
         <div class= "panel panel-default"> 
             <div class="panel-heading"> 
-                <h4 class="panel-title"><a href="{{ route('shop') }}">Musical Instruments</a></h4>
+                <h4 class="panel-title"><a href="{{ route('shop.category','Musical Instruments') }}">Musical Instruments</a></h4>
             </div>
         </div>
         <div class= "panel panel-default"> 
             <div class="panel-heading"> 
-                <h4 class="panel-title"><a href="{{ route('shop') }}">Sports</a></h4>
+                <h4 class="panel-title"><a href="{{ route('shop.category','Sports') }}">Sports</a></h4>
             </div>
         </div>
         <div class= "panel panel-default"> 
             <div class="panel-heading"> 
-                <h4 class="panel-title"><a href="">Toys and Hobbies</a></h4>
+                <h4 class="panel-title"><a href="{{ route('shop.category','Toys and Hobbies') }}">Toys and Hobbies</a></h4>
             </div>
         </div>
         <div class= "panel panel-default"> 
             <div class="panel-heading"> 
-                <h4 class="panel-title"><a href="">Video games and console</a></h4>
+                <h4 class="panel-title"><a href="{{ route('shop.category','Video games and console') }}">Video games and console</a></h4>
             </div>
         </div>
     </div>

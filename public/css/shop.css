@@ -1,10 +1,14 @@
 .listings{
   overflow: hidden;
+  background-color: #F7F7F7;
   border-radius: 4px;
 }
+right.cont{
+  background-color: #F7F7F7;
+}
+
 .listing-panel{
   padding-bottom: 20px;
-  border: 1px solid #F7F7F0;
   /* height: 171px;
   width : 845px; */
 }
