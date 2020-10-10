@@ -31,7 +31,7 @@
             @yield('breadcrumb')
         </div>
     </div>
-        <div class='container my-container'>
+        <div class='container-fluid my-container'>
             <div class="col my-col">
                 @yield('content')
             </div>

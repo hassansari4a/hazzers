@@ -18,6 +18,11 @@ class NewProductController extends Controller
         $this->middleware('web');
     }
 
+    protected function edit($slug){
+        // $product = Product::where('slug',$slug)->firstorfail();
+        // return view('listingupdate')->with('product',$product);
+    }
+
     protected function store(Request $request){
         $product = new Product;
         $product->adtitle = $request->input('adtitle');

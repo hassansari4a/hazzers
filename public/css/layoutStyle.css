@@ -1,8 +1,9 @@
-body {
+body { 
+    padding-right: 0 !important ;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
+}
 
 main {
     flex: 1 0 auto;
@@ -50,9 +51,7 @@ main {
     margin:7px; 
 } 
 
-.col-3{
-    float: left;
-}
+
 .left-sidebar h2, h2 {
     color: #FE980F;
     font-family: 'Roboto', sans-serif;
@@ -116,4 +115,12 @@ main {
     font-size: 16px;
     color: inherit;
     font-weight: 500;
+    transition: 0.3s;
+}
+.panel-title:hover{
+    transform: translateX(5px);
+}
+
+.col-3{
+    float: left;
 }

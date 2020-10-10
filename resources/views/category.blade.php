@@ -4,7 +4,7 @@
 <div class="breadcrumbs">
         <a class="blink" href="{{ route('/')}}">Home</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <a class="blink" href="{{ route('/')}}">Shop</a>
+        <a class="blink" href="{{ route('shop')}}">Shop</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
         <span>{{$categoryselect}}</span>
 </div>

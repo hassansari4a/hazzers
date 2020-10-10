@@ -18,13 +18,12 @@ Route::get('/', function () {
 Route::get('/register', function () {
     return view('register');
 });
-// Route::get('/cart', function () {
-//     return view('cart');
-// });
 
-Route::get('/category', function () {
-    return view('category');
+Route::get('/my-products', function () {
+    return view('my-products');
 });
+
+
 
 Auth::routes();
 
@@ -34,6 +33,8 @@ Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 Route::get('/shop/category/{category}', 'CategoryController@show')->name('shop.category');
 
 Route::get('/cart', 'CartController@index')->name('cart.index');
+
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/users/logout', 'Auth\LoginController@userLogout')->name('user.logout');
@@ -47,3 +48,7 @@ Route::prefix('admin')->group(function(){
 
 Route::get('/new-product', 'NewProductController@index')->name('newproduct');
 Route::post('/new-product', 'NewProductController@store')->name('newproduct.submit');
+
+Route::get('/my-products', 'MyProductsController@index')->name('myproducts');
+Route::get('/edit-listing/{slug}', 'MyProductsController@edit')->name('editproduct');
+Route::POST('/edit-listing/{slug}', 'MyProductsController@update')->name('editproduct.submit');

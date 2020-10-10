@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom shadow-sm sticky-top" style="margin-bottom: 10px">
   	<div class="container-fluid padding ">
-	  <a href="{{route('home')}}" class="navbar-brand"><img src="{{asset('/img/LogoReal.png')}}" width="126" height="50" alt="Hazzers"></a>
+	  <a href="{{route('/')}}" class="navbar-brand"><img src="{{asset('/img/LogoReal.png')}}" width="126" height="50" alt="Hazzers"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -28,7 +28,10 @@
         			</a>
 					<ul class="dropdown-menu" role="menu">
 						<li>
-							<a href="/new-product" class="dropdown-item text-reset font-weight-light">Add product</a>
+							<a href="{{ route('newproduct')}}" class="dropdown-item text-reset font-weight-light">Add a Product</a>
+						</li>
+						<li>
+							<a href="{{ route('myproducts')}}" class="dropdown-item text-reset font-weight-light">My Products</a>
 						</li>
 						<li>
 							<a href="/logout" class=" dropdown-item  text-reset font-weight-light"
