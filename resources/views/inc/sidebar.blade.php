@@ -49,7 +49,7 @@
         </div>
         <div class= "panel panel-default"> 
             <div class="panel-heading"> 
-                <h4 class="panel-title"><a class="animation-class"  href="{{ route('shop.category','Video games and console class="animation-class" ') }}">Video games and console</a></h4>
+                <h4 class="panel-title"><a class="animation-class"  href="{{ route('shop.category','Video games and console') }}">Video games and console</a></h4>
             </div>
         </div>
     </div>

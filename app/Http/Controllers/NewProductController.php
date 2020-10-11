@@ -44,11 +44,9 @@ class NewProductController extends Controller
             $product->adphoto = '';
             $filename='';
         }
-        $product->slug = str_replace(" ","-",$request->input('adtitle'));
-
-
+        $slugname = str_replace(" ","-",$request->input('adtitle'));
+        $product->slug = $slugname; 
         $product->save();
-
-        return redirect()->intended(route('home'));
+        return redirect()->intended(route('shop.show', $slugname));
     }
 }

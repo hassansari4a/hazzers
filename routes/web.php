@@ -52,3 +52,4 @@ Route::post('/new-product', 'NewProductController@store')->name('newproduct.subm
 Route::get('/my-products', 'MyProductsController@index')->name('myproducts');
 Route::get('/edit-listing/{slug}', 'MyProductsController@edit')->name('editproduct');
 Route::POST('/edit-listing/{slug}', 'MyProductsController@update')->name('editproduct.submit');
+Route::POST('/deleted/{slug}','MyProductsController@destroy')->name('deleteproduct');

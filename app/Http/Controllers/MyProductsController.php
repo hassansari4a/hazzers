@@ -92,21 +92,15 @@ class MyProductsController extends Controller
                 ]);
         return redirect()->intended(route('myproducts'));
     }
-    // ('description' => $request->input('description')),
-    // ('price' => $request->input('cost')),
-    // ('deliverycharge' => $request->input('deliverycharge')),
-    // ('categoryselect' => $request->input('categoryselect')),
-    // ('phone' => $request->input('phone')),
-    // ('adphoto' => $filename)])
-
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  string $slug
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($slug)
     {
-        //
+        Product::where('slug', $slug)->delete();
+        return redirect()->intended(route('myproducts'));
     }
 }
