@@ -1,0 +1,25 @@
+.btn-checkout{
+  border: 1px solid #333;
+  padding: 10px 20px;
+  color: #333;
+  border-radius: 4px;
+  float: right;
+}
+
+.btn-checkout:hover{
+  text-decoration: none;
+  background-color: #333;
+  color: #fff;
+}
+.btn-checkout:active{
+  transform: scale(.99,.99);
+  text-decoration: none;
+}
+
+.remove-link{
+  color: #333;
+}
+
+.remove-link:hover{
+  transform: scale(1.5,1.5);
+}

@@ -10,9 +10,26 @@
   text-align: right;
   color: rgb(73, 61, 61);
   padding-bottom: 10px;
-  border-bottom: 1px solid #e3e3e3;
-
 }
+.add-to-cart{
+  text-align: right;
+}
+#add-to-cart{
+  padding : 10px 20px;
+  border : 1px solid #333;
+  text-decoration: none;
+  color : #333;
+  border-radius: 4px;;
+}
+#add-to-cart:hover{
+  color:#fff;
+  background-color: #333;
+}
+#add-to-cart:active{
+  color:#fff;
+  background-color: rgb(32, 32, 32);
+}
+
 .product-img{
   width: 400px;
   height: auto;
@@ -24,7 +41,15 @@
 }
 
 .product-panel{
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   padding-bottom: 10px;
   border-bottom: 1px solid #e3e3e3;
+}
+#emailid{
+  text-decoration: none;
+  color: rgb(100, 97, 97);
+}
+#emailid:hover{
+  text-decoration: none;
+  color: #333;
 }

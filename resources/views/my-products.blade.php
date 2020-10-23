@@ -35,6 +35,7 @@
           <td>{{$product->phone}}</td>
           <td class="item-photo"><img class="adphoto" src="/uploads/productimg/{{$product->adphoto}}" alt="{{$product->adphoto}}"></td>
           <td class="item-action">
+            <a href="{{route('shop.show', $product->slug)}}" class="text-reset icons"><i class="fa fa-eye"  id="icons" title="view"></i></a>
             <a href="{{route('editproduct', $product->slug)}}" class="text-reset icons"><i class="fa fa-pencil-alt"  id="icons" title="edit"></i></a>
             <a href="" data-toggle="modal" data-target="#deleteModal" data-url="{{route('deleteproduct', $product->slug)}}" class="text-reset deleteLink"><i class="fa fa-trash" data-toggle="tooltip" id="icons" title="delete"></i></a>
           </td>

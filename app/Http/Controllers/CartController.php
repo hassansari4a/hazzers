@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
+use App\Cart;
+use Session;
 
 class CartController extends Controller
 {
@@ -11,11 +14,23 @@ class CartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('cart');
+    public function __construct(){
+        $this->middleware('auth:web');
     }
 
+    public function index()
+    {
+        if (!Session::has('cart')){
+            return view('cart');
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('cart',['products'=>$cart->items, 'totalPrice'=>$cart->totalPrice]);
+    }
+    public function addtocart($slug)
+    {
+        
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -32,9 +47,16 @@ class CartController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $slug)
     {
-        //
+        $product = Product::where('slug', $slug)->firstorfail();
+        $oldCart = Session::has('cart') ? Session::get('cart'):null;
+        $cart = new Cart($oldCart);
+        $cart->add($product, $product->slug);
+
+        $request-> session()->put('cart', $cart);
+
+        return redirect()->route('shop.show', $product->slug);
     }
 
     /**

@@ -20,6 +20,11 @@
       <div class="product-price">
         <h3 class="pprice">Rs. {{ $product -> price }}</h3>
       </div>
+      <div class="add-to-cart product-panel pb-4">
+        
+            <a href="{{route('cart.store', $product -> slug)}}" id="add-to-cart">Add to cart</a>
+        
+      </div>
       <div class="product-description row product-panel">
         <div class="col-3">
           Description:
@@ -41,7 +46,7 @@
           Email:
         </div>
         <div class="col-9">
-          {{ $product -> email }}
+          <a id="emailid" href="mailto:{{ $product -> email }}">{{ $product -> email }}</a>
         </div>
       </div>
       <div class="product-deliverycharge row product-panel">

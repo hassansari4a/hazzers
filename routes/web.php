@@ -33,6 +33,7 @@ Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 Route::get('/shop/category/{category}', 'CategoryController@show')->name('shop.category');
 
 Route::get('/cart', 'CartController@index')->name('cart.index');
+Route::get('/cart/{slug}', 'CartController@store')->name('cart.store');
 
 
 
