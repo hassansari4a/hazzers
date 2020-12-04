@@ -1,0 +1,33 @@
+.search-box{
+  height:25px;
+  display: block;
+  text-align: center;
+  margin:7px; 
+  transform: translateY(3px);
+}
+.search-box:hover .search-text{
+  width: 200px;
+  padding: 0 6px;
+  border-bottom: 2px solid #333;
+}
+.search-text:focus{
+  width: 200px;
+}
+
+.search-text{
+  border:none;
+  background: none;
+  outline: none;
+  float: left;
+  padding:0;
+  font-size: 15px;
+  transition: 0.4s;
+  width: 0px;
+  border-bottom: 2px solid white;
+}
+
+.search-btn{
+  transition: 0.4s;
+  color:#333;
+}
+

@@ -25,7 +25,7 @@ class CartController extends Controller
         }
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
-        return view('cart',['products'=>$cart->items, 'totalPrice'=>$cart->totalPrice]);
+        return view('cart',['products'=>$cart->items, 'totalPrice'=>$cart->totalPrice, 'delCharge'=>$cart->delCharge, 'total'=>$cart->total]);
     }
     public function addtocart($slug)
     {
@@ -59,6 +59,15 @@ class CartController extends Controller
         return redirect()->route('shop.show', $product->slug);
     }
 
+    public function getCheckout(){
+        if (!Session::has('cart')){
+            return view('cart');
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        $total = $cart->totalPrice;
+        return view('checkout', ['total'=>$total]);
+    }
     /**
      * Display the specified resource.
      *

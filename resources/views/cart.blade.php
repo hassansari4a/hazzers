@@ -14,7 +14,7 @@
 <div class="container py-2" style="font-family: Roboto">
   @if(Session::has('cart'))
   <!-- If there are items in the cart -->
-    <h3>Your Cart</h3>
+    <h4>{{ Auth::user()->name }}'s Cart</h4>
     <div class="row ">
       <div class="col-lg-8 bg-faded">
         <table class="table">
@@ -41,9 +41,21 @@
           <tfoot>
             <tr>
               <td></td>
-              <td style="text-align: right; font-weight: 500">Total Price:</td>
+              <td style="text-align: right; font-weight: 400">Total Price:</td>
               <td></td>
-              <td>{{$totalPrice}}</td>
+              <td>{{$total}}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td style="text-align: right; font-weight: 400">Delivery Charge:</td>
+              <td></td>
+              <td>+ {{$delCharge}}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td style="text-align: right; font-weight: 500">Total:</td>
+              <td></td>
+              <td style="font-weight: 600">{{$totalPrice}}</td>
             </tr>
           </tfoot>
         </table>
@@ -51,7 +63,7 @@
     </div>
     <div class="row">
       <div class="col-lg-8 bg-faded pb-2 px-4">
-        <a href="" class="btn-checkout">
+        <a href="{{route('checkout')}}" class="btn-checkout">
           Proceed to checkout
         </a>
       </div>

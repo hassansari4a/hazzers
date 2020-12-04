@@ -2,18 +2,30 @@
 
 @section('breadcrumb')
 <div class="breadcrumbs">
-        <a class="blink" href="{{ route('/')}}">Home</a>
+<a class="blink" href="{{ route('/')}}">Home</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span>Shop</span>
-        <!-- <li class="breadcrumb-item"><a id="bcrumb-link" href="#">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Shop</li> -->
+        <a class="blink" href="{{ route('shop')}}">Shop</a>
+        <i class="fa fa-chevron-right breadcrumb-separator"></i>
+        <span>Searching "{{ request()->input('search')}}" ...</span>
 </div>
 @endsection
 
 @section('content')
 <div class="container listings">
-    <h2 class="listing-heading">Listings</h2>
-    @foreach ($products as $product)      
+    <h2 class="listing-heading">Search Results</h2>
+    @if(count($errors) > 0)
+      <div class="alert alert-danger">
+        <ul>
+          @foreach ($errors->all() as $error)
+            <li>{{$error}}</li>
+          @endforeach
+        </ul>
+      </div>
+    @endif
+
+    <p>{{ $products->total()}} result(s) for '{{ request()->input('search')}}'</p>
+
+    @foreach ($products as $product)
     <div class="listing-panel">
         <div class="row listing-row">
             <div class="col-3">
@@ -28,7 +40,7 @@
                 <h3 class="listing-title"><a class="text-decoration-none text-reset" href="{{ route('shop.show',$product->slug) }}">{{ $product->adtitle }}</a></h3>
                 </div>
                 <div class="descriptioncontainer">
-                    <p class="listing-des">{{ str_limit($product->description, 80) }}</p>
+                    <p class="listing-des text-truncate">{{ $product->description }}</p>
                 </div>
             </div>
             <div class="col-2 pricecontainer">

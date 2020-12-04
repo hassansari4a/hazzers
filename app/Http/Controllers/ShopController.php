@@ -14,7 +14,7 @@ class ShopController extends Controller
      */
     public function index()
     {
-        $products = Product::inRandomOrder()->take(12)->get();
+        $products = Product::inRandomOrder()->paginate(8);
         return view('shop')->with('products',$products);
     }
 
@@ -51,6 +51,22 @@ class ShopController extends Controller
         return view('product')->with('product',$product);
     }
 
+    public function search(Request $req){
+        $req->validate([
+            'search'=> 'required|min:3',
+        ]);
+
+        $query = $req->input('search');
+
+        // $products = Product::where('adtitle','like',"%$query%")
+        //                     ->orwhere('description','like',"%$query%")
+        //                     ->orwhere('categoryselect','like',"%$query%")
+        //                     ->paginate(8);
+        
+        $products = Product::search($query)->paginate(8);
+
+        return view('search-results')->with('products', $products);
+    }
     /**
      * Show the form for editing the specified resource.
      *

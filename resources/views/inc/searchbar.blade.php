@@ -1,12 +1,10 @@
-<div class="search" id="searchbar"> 
-    <div class="container">
-    <form action="#"> 
-        <input type="text" placeholder=" Search.." name="search"> 
-            <!-- <button> 
+<div class="search-box" id="searchbar"> 
+    <form id="search_form" action="{{ route('search') }}" method="get">
+        <input class="search-text" type="text" placeholder="Type to Search" name="search" value="{{ request()->input('search')}}"> 
+            <a class="search-btn" href="javascript:{}" onclick="document.getElementById('search_form').submit(); return false;"> 
                 <i class="fa fa-search"
                 style="font-size: 18px;"> 
                 </i> 
-            </button>-->
+            </a>
     </form>
-    </div>
 </div> 

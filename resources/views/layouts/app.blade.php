@@ -20,13 +20,14 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/layoutStyle.css">
     <link rel="stylesheet" href="/css/shop.css">
+    <link rel="stylesheet" href="/css/searchbar.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 </head>
 <body ">
-    
     <header>
         @include('inc.navbar')
     </header>
+
     <main>
     <div class="container-fluid ">
         <div class="breadcrumb-container bg-faded">
@@ -35,10 +36,10 @@
     </div>
     <div class='container my-container '>
         <div class="row my-row align-self-start">
-            <div class="col-3">
+            <div class="col-md-3">
                 @include('inc.sidebar')
             </div>
-            <div class="col-9 my-col right-cont px-1 py-1" >
+            <div class="col-md-9 my-col right-cont px-1 py-1" >
                 <div class="shop">
                     @yield('content')
                 </div>
@@ -46,9 +47,7 @@
         </div>
     </div>
     </main>
-    
     @include('inc.footer')
-    
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>

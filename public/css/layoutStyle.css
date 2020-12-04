@@ -10,7 +10,6 @@ main {
 }
 .breadcrumb-container{
     border-radius: .25rem;
-
 }
 
 .cart-icon{
@@ -45,20 +44,6 @@ main {
     padding: 40px;
     padding-bottom: 25px;
 }
-
-#searchbar{
-    width:500px; 
-    height:25px; 
-    border-radius:25px; 
-    border: none; 
-    display:block;
-    text-align: center;
-}
-.search{ 
-    float:right; 
-    margin:7px; 
-} 
-
 
 .left-sidebar h2, h2 {
     color: #FE980F;
@@ -135,6 +120,6 @@ main {
 
 .listing-img{
     width: 125px;
-    height: 125px;
+    height: 100%;
     border: 3px solid #8f8f8c;
   }

@@ -6,6 +6,9 @@
 		</button>
 		<div class="collapse navbar-collapse">
 			<ul class="navbar-nav ml-auto">
+				<li>
+					@include('inc.searchbar')
+				</li>
 				@if (Auth::guest())
 				<li class="nav-item">
 					<a href="/login" class="nav-link">Login</a>
@@ -37,10 +40,9 @@
 								document.getElementById('logout-form').submit();">
 									Log out
 							</a>
-
 							<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                				{{ csrf_field() }}
-            				</form>
+              	{{ csrf_field() }}
+            	</form>
 						</li>
 						
 					</ul>
