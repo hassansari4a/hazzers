@@ -1,5 +1,8 @@
-@font-face { font-family: Roboto; 
-    src: url('../font/Roboto.ttf'); } 
+@font-face { 
+    font-family: Roboto; 
+    src: url('../font/Roboto.ttf');
+} 
+
 
 body { 
     padding-right: 0 !important ;
@@ -50,7 +53,7 @@ main {
 
 .left-sidebar h2, h2 {
     color: #FE980F;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Medium', sans-serif;
     font-size: 18px;
     font-weight: 700;
     margin: 0 auto 20px;
