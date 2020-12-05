@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="/css/cart.css">
 
 @section('content')
-<div class="container py-2" style="font-family: Roboto">
+<div class="container cart-container py-2">
   @if(Session::has('cart'))
   <!-- If there are items in the cart -->
     <h4>{{ Auth::user()->name }}'s Cart</h4>

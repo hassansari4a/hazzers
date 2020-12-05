@@ -1,3 +1,10 @@
+@font-face { font-family: Roboto; 
+  src: url('../font/Roboto.ttf'); } 
+
+.cart-container{
+  font-family: Roboto;
+}
+
 .btn-checkout{
   border: 1px solid #333;
   padding: 10px 20px;
