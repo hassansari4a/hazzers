@@ -19,7 +19,7 @@
             <div class="col-3">
             <div class="imgcontainer">
                 <a href="{{ route('shop.show',$product->slug) }}">
-                    <img class="rounded listing-img" src="{{asset('uploads/productimg/$product->adphoto')}}" alt="">
+                    <img class="rounded listing-img" src="./uploads/productimg/{{ $product->adphoto}}" alt="">
                 </a>
             </div>        
             </div>
