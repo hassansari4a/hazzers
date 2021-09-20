@@ -57,7 +57,7 @@ class CartController extends Controller
         $request-> session()->put('cart', $cart);
 
         return redirect()->route('shop.show', $product->slug);
-    }
+    }   
 
     public function getCheckout(){
         if (!Session::has('cart')){

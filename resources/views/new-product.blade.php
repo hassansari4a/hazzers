@@ -25,7 +25,7 @@
             </div>
             <div class="form-gorup col">
                 <label for="deliverycharge">Delivery Charge</label>
-                <input type="number" name="deliverycharge" id="deliverycharge" placeholder="( ° ͜ʖ͡°)╭∩╮" class="form-control">
+                <input type="number" name="deliverycharge" id="deliverycharge" class="form-control">
             </div>
             <div class="form-group col">
             <label for="categotyselect">Category select</label>
